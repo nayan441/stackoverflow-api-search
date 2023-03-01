@@ -12,7 +12,7 @@ from django_ratelimit.decorators import ratelimit
 
 class StackOverflow:
     base_url = "https://api.stackexchange.com/2.3/search"
-    api_key = "<stackoverflow-api-key>"
+    api_key = "<stackoverflow-api-key>" # paste your key here
 
     @classmethod
     def search(cls, query, page=1, page_size=5):
