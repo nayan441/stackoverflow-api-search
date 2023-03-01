@@ -7,6 +7,7 @@ from django.core.cache import cache
 from django.shortcuts import render
 from django.core.cache import cache
 from django_ratelimit.decorators import ratelimit
+from django.utils.decorators import method_decorator
 
 
 
@@ -32,8 +33,8 @@ class StackOverflow:
 
 @api_view(['GET'])
 @cache_page(60*60*24)
-@ratelimit(key='user', rate='5/m', block=True)
-@ratelimit(key='user', rate='100/d', block=True)
+# @ratelimit(key='user', rate='5/m', block=True)
+# @ratelimit(key='user', rate='100/d', block=True)
 def search(request):
     query = request.GET.get('q', '')
     page = int(request.GET.get('page', 1))
