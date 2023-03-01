@@ -33,7 +33,6 @@ export class SearchResultsComponent implements OnInit  {
       console.log(results);
 
 
-      this.results.reset();
     });
   }
   
