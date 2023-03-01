@@ -1,0 +1,29 @@
+<div class="input-field">
+    <input  placeholder="write your question here...."  class="input-box"  value="docker compose up" [(ngModel)]="query" (keydown.enter)="onSearch()">
+    <button  class="search-button" (click)="onSearch()">Search</button>
+</div>
+
+
+<div *ngIf="results">
+
+
+  <div *ngFor="let item of results.items">
+    <div class="jumbotron">
+
+        <a href="{{item.link}}" > <h2>{{ item.title }} </h2> </a>
+        <p>{{ item.tags.join(', ') }}</p>
+        <p>Asked by  <span> {{ item.owner.display_name }} </span></p>
+    </div>
+  </div>
+
+  <div class="button-flex">
+
+        <div>
+          <button class ="button-class" *ngIf="is_previous" (click)="onPageChangePrevious()">PreviousPage Page</button>
+        </div>
+        <div> 
+          <button    class ="button-class"  *ngIf="results.has_more" (click)="onPageChange()">Next Page</button>
+        </div>
+  </div>
+
+</div>

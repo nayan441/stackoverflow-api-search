@@ -1,0 +1,61 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+span{
+    color: brown;
+}
+
+.button-flex{
+   display:flex; 
+   margin: auto;
+   align-items: center;
+   width: 800px;
+   justify-content: space-around;
+
+
+
+}
+
+.input-field{
+    margin: auto;
+    align-items: center;
+    width: 800px;
+
+}
+
+.button-class{
+    margin: 100px;
+    padding: 5px;
+    background-color: bisque;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+}
+
+.input-box{
+    height: 50px;
+    width: 500px;
+    margin: 50px;
+    border-radius: 5px;
+
+
+}
+
+.search-button{
+background-color: rgb(90, 207, 90);
+padding: 5px;
+border-radius: 10px;
+height: 50px;
+width: 150px;
+
+}
+
+.jumbotron{
+    background-color: rgb(220, 215, 215);
+    padding: 10px;
+    margin: 10px;
+}

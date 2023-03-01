@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search StackOverflow </h1>
+  <form method="get" action="{% url 'search' %}">
+    <input type="text" name="q" value="{{ request.GET.q }}">
+    <button type="submit">Search</button>
+  </form>
+
+
+  {% if questions %}
+    <h2>Results:</h2>
+    {% for question in questions %}
+      <div class="question">
+        <h3><a href="{{ question.link }}">{{ question.title }}</a></h3>
+        <p>{{ question.body }}</p>
+      </div>
+    {% endfor %}
+
+    {% if questions.has_previous %}
+      <a href="?q={{ request.GET.q }}&page={{ questions.previous_page_number }}">Previous</a>
+    {% endif %}
+    <span class="current-page">{{ questions.number }}</span>
+    {% if questions.has_next %}
+      <a href="?q={{ request.GET.q }}&page={{ questions.next_page_number }}">Next</a>
+    {% endif %}
+  {% endif %}
+{% endblock %}
