@@ -1,6 +1,6 @@
 
 # For DRF API
-
+ 
 ## create virtual environment 
       -$ virtualenv venv
       
