@@ -4,7 +4,7 @@
 ## create virtual environment 
       -$ virtualenv venv
       
-## get inside virtual environment
+## get inside virtual environment 
       -$ pip install -r requirements.txt
       
 ## Include stackoverflow API key
