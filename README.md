@@ -5,7 +5,7 @@
       -$ virtualenv venv
       
 ## get inside virtual environment 
-      -$ pip install -r requirements.txt
+      -$ pip install -r requirements.txt 
       
 ## Include stackoverflow API key
       Paste your stackoverflow api key in core02/views.py 
